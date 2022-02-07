@@ -40,6 +40,11 @@ const reducer = (
           ...state,
           articles: updatedArticles,
         }
+        case actionTypes.FETCH_ARTICLE:
+        return {
+          ...state,
+          articles: state.articles
+        }
     }
     return state
   }

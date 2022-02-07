@@ -38,7 +38,8 @@ export function fetchArticleDetails() {
     return function(dispatch: DispatchType) {
       return axios.get("https://jsonplaceholder.typicode.com/posts")
         .then(({ data }) => {
-        dispatch(setArticleDetails(data));
+            console.log('Articles:', data);
+        dispatch(data);
       });
     };
   }
